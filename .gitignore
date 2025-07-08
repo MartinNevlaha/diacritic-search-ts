@@ -1,0 +1,11 @@
+dist
+node_modules
+*.tsbuildinfo
+*.js
+*.d.ts
+*.js.map
+*.d.ts.map
+*.test.js
+*.test.ts
+*.test.js.map
+*.test.d.ts.map

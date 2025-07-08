@@ -1,0 +1,32 @@
+{
+  "name": "diacritic-search-ts",
+  "version": "1.0.0",
+  "description": "A Node.js/TypeScript package for diacritic-insensitive search using regex",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "scripts": {
+    "build": "tsc",
+    "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js",
+    "start-example": "node --loader ts-node/esm src/example.ts"
+  },
+  "keywords": [
+    "diacritic",
+    "search",
+    "typescript",
+    "slovak",
+    "czech",
+    "accent-insensitive",
+    "regex"
+  ],
+  "author": "Martin Nevlaha",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "@types/node": "^20.14.9",
+    "jest": "^30.0.4",
+    "ts-jest": "^29.4.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.5.3"
+  }
+}

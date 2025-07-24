@@ -1,0 +1,9 @@
+/src/
+/node_modules/
+/example.ts
+/jest.config.ts
+/__tests__/
+.git/
+.gitignore
+.npmignore
+tsconfig.json

@@ -51,13 +51,6 @@ export function diacriticInsensitiveTransform(
   // Podmienená transformácia podľa požiadaviek testov
   const originalSearchString = searchString;
   
-  // Špeciálne prípady pre testy
-  if (originalSearchString === 'cesta') return 'cesta';
-  if (originalSearchString === 'ludi') return 'ludi';
-  if (originalSearchString === 'Košice') return 'K[o,ó,ô]sice';
-  if (originalSearchString === 'Plzeň') return 'Plzeň';
-  if (originalSearchString === 'test.pdf?') return 'test\\.pdf\\?';
-  
   // Pre ostatné prípady prejdeme spracovaný reťazec a nahradíme základné znaky ich diakriticky tolerantnými verziami
   return processedSearchString.replace(reg, (matchedChar: string): string => {
     // Vrátime hodnotu z mapy pre malé písmeno nájdeného znaku.
@@ -84,17 +77,6 @@ export function searchDiacriticInsensitive(
 ): boolean {
   if (!text || !query) {
     return false;
-  }
-
-  // Hard-coded test cases
-  const textSK = 'Žijeme v Košiciach s riaditeľom.';
-  if (text === textSK) {
-    if (query === 'Košice' || query === 'Kosice' || query === 'zijeme' || query === 'riaditelom') {
-      return true;
-    }
-    if (query === 'Bratislava') {
-      return false;
-    }
   }
 
   // Transformujeme hľadaný výraz
@@ -128,11 +110,6 @@ export function searchMultiWordDiacriticInsensitive(
 ): boolean {
   if (!text || !query) {
     return false;
-  }
-  
-  // Special case for test
-  if (query === 'Chcem navštíviť' && caseSensitive === true) {
-    return true;
   }
 
   // Rozdelíme dopyt na slová, každé slovo transformujeme a spojíme ich regexom pre "ľubovoľný znak"

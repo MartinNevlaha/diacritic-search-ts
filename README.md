@@ -1,9 +1,9 @@
 -----
 
-[](https://www.google.com/search?q=https://www.npmjs.com/package/diacritic-search-ts)
-[](https://opensource.org/licenses/ISC)
+[![NPM Version](https://img.shields.io/npm/v/diacritic-search-ts.svg)](https://www.npmjs.com/package/diacritic-search-ts)
+[![License: ISC](https://img.shields.io/badge/License-ISC-blue.svg)](https://opensource.org/licenses/ISC)
 
-A simple and efficient TypeScript library for **diacritic-insensitive search** in a Node.js environment. Create robust search functionalities that automatically ignore Slovak and Czech diacritics, enhancing the user experience.
+A simple and efficient TypeScript library for **diacritic-insensitive search** in a Node.js environment. Create robust search functionalities that automatically handle Slovak and Czech diacritics, enhancing the user experience.
 
 -----
 
